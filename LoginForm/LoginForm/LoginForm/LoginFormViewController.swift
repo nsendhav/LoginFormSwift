@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginFormViewController.swift
 //  LoginForm
 //
 //  Created by Narendra Singh Sendhav on 3/1/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginFormViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
