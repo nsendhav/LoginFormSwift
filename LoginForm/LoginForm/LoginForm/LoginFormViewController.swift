@@ -17,10 +17,12 @@ class LoginFormViewController: UIViewController {
     @IBOutlet weak var dateOfBirthTextField: UITextField!
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
+    var isGenderMale = true
     
     //MARK: @UIViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        maleButton.setImage(UIImage(named: "checked_box"), for: .normal)
         self.getDateOfBirthPicker()
     }
 
