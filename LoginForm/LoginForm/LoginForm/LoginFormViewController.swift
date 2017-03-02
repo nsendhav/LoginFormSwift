@@ -10,7 +10,6 @@ import UIKit
 
 class LoginFormViewController: UIViewController {
 
-    
     @IBOutlet weak var profilePhotoButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -38,8 +37,11 @@ class LoginFormViewController: UIViewController {
         self.dateOfBirthTextField.inputView = datePicker
     }
     
-    func updateDateOfBirthValue() {
-
+    func updateDateOfBirthValue(sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        self.dateOfBirthTextField.text = dateFormatter.string(from: sender.date)
     }
     
     //MARK: @IBAction

@@ -47,7 +47,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mK8-FA-EQ2"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -68,7 +68,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="yvL-fZ-XyS"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                 <userDefinedRuntimeAttributes>
@@ -89,7 +89,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rLa-BK-Eu1"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
