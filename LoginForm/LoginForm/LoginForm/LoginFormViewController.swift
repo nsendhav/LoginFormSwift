@@ -82,6 +82,17 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate, UIImagePic
         self.present(picker!, animated: true, completion: nil)
     }
     
+    func pushLoginDetailView() {
+        let loginDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginDetailViewController") as! LoginDetailViewController
+        loginDetailViewController.profileImage = (profilePhotoButton.imageView?.image)!
+        loginDetailViewController.name = nameTextField.text!
+        loginDetailViewController.email = emailTextField.text!
+        loginDetailViewController.phoneNumber = phoneNumberTextField.text!
+        loginDetailViewController.dateOfBirth = dateOfBirthTextField.text!
+        loginDetailViewController.isGenderMale = isGenderMale
+        self.navigationController?.pushViewController(loginDetailViewController, animated: true)
+    }
+    
     //MARK: @IBAction
     @IBAction func profilePhotoAction(_ sender: Any) {
         self.openImagePicker()
@@ -90,14 +101,17 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate, UIImagePic
     @IBAction func maleAction(_ sender: Any) {
         maleButton.setImage(UIImage(named: "checked_box"), for: .normal)
         femaleButton.setImage(UIImage(named: "unchecked"), for: .normal);
+        isGenderMale = true
     }
     
     @IBAction func femaleAction(_ sender: Any) {
         maleButton.setImage(UIImage(named: "unchecked"), for: .normal)
         femaleButton.setImage(UIImage(named: "checked_box"), for: .normal);
+        isGenderMale = false
     }
    
     @IBAction func submitAction(_ sender: Any) {
+        self.pushLoginDetailView()
     }
     
     //MARK: UIImagePickerControllerDelegate

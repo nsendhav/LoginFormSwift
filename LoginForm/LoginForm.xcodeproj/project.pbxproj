@@ -31,6 +31,7 @@
 		D834688F1E67387100778395 /* LoginFormTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D834688E1E67387100778395 /* LoginFormTests.swift */; };
 		D834689A1E67387100778395 /* LoginFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83468991E67387100778395 /* LoginFormUITests.swift */; };
 		D83468AA1E6739F200778395 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83468A91E6739F200778395 /* LoginFormViewController.swift */; };
+		D8C91F621E69DA7D009873AA /* LoginDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C91F611E69DA7D009873AA /* LoginDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		D83468991E67387100778395 /* LoginFormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormUITests.swift; sourceTree = "<group>"; };
 		D834689B1E67387100778395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D83468A91E6739F200778395 /* LoginFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		D8C91F611E69DA7D009873AA /* LoginDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				D83468791E67387100778395 /* AppDelegate.swift */,
 				D80555581E6895E7000E3B43 /* ThirdParty */,
 				D83468A81E6739F200778395 /* LoginForm */,
+				D8C91F601E69DA50009873AA /* LoginDetail */,
 				D834687D1E67387100778395 /* Main.storyboard */,
 				D83468801E67387100778395 /* Assets.xcassets */,
 				D83468821E67387100778395 /* LaunchScreen.storyboard */,
@@ -239,6 +242,15 @@
 			children = (
 				D83468A91E6739F200778395 /* LoginFormViewController.swift */,
 			);
+			path = LoginForm;
+			sourceTree = "<group>";
+		};
+		D8C91F601E69DA50009873AA /* LoginDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D8C91F611E69DA7D009873AA /* LoginDetailViewController.swift */,
+			);
+			name = LoginDetail;
 			path = LoginForm;
 			sourceTree = "<group>";
 		};
@@ -380,6 +392,7 @@
 				D80555561E6895E3000E3B43 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				D80555491E6895E3000E3B43 /* IQUITextFieldView+Additions.swift in Sources */,
 				D80555541E6895E3000E3B43 /* IQTitleBarButtonItem.swift in Sources */,
+				D8C91F621E69DA7D009873AA /* LoginDetailViewController.swift in Sources */,
 				D805554D1E6895E3000E3B43 /* IQKeyboardManagerConstants.swift in Sources */,
 				D80555521E6895E3000E3B43 /* IQBarButtonItem.swift in Sources */,
 				D80555501E6895E3000E3B43 /* IQKeyboardReturnKeyHandler.swift in Sources */,
