@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginFormViewController: UIViewController {
+class LoginFormViewController: UIViewController, UIAlertViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var profilePhotoButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -18,7 +18,8 @@ class LoginFormViewController: UIViewController {
     @IBOutlet weak var maleButton: UIButton!
     @IBOutlet weak var femaleButton: UIButton!
     var isGenderMale = true
-    
+    var picker:UIImagePickerController? = UIImagePickerController()
+
     //MARK: @UIViewController Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +47,44 @@ class LoginFormViewController: UIViewController {
         self.dateOfBirthTextField.text = dateFormatter.string(from: sender.date)
     }
     
+    func openImagePicker() {
+        let alert:UIAlertController = UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            self.openCamera()
+        }
+        let gallaryAction = UIAlertAction(title: "Gallary", style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            self.openGallary()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
+            UIAlertAction in
+        }
+        
+        // Add the actions
+        picker?.delegate = self
+        alert.addAction(cameraAction)
+        alert.addAction(gallaryAction)
+        alert.addAction(cancelAction)
+        // Present the controller
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func openCamera() {
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)) {
+            picker!.sourceType = UIImagePickerControllerSourceType.camera
+            self.present(picker!, animated: true, completion: nil)
+        }
+    }
+    func openGallary() {
+        picker!.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(picker!, animated: true, completion: nil)
+    }
+    
     //MARK: @IBAction
     @IBAction func profilePhotoAction(_ sender: Any) {
+        self.openImagePicker()
     }
 
     @IBAction func maleAction(_ sender: Any) {
@@ -61,6 +98,19 @@ class LoginFormViewController: UIViewController {
     }
    
     @IBAction func submitAction(_ sender: Any) {
+    }
+    
+    //MARK: UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            profilePhotoButton.setImage(pickedImage, for: .normal)
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker .dismiss(animated: true, completion: nil)
     }
 }
 
