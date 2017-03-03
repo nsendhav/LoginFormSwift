@@ -279,6 +279,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sss-Db-HUP">
+                                <rect key="frame" x="9" y="13" width="42" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="XHp-rf-LMc"/>
+                                    <constraint firstAttribute="height" constant="50" id="l2Q-Hz-OpJ"/>
+                                </constraints>
+                                <state key="normal" image="back_btn_new"/>
+                                <connections>
+                                    <action selector="backAction:" destination="3iA-CU-zjd" eventType="touchUpInside" id="npy-YD-MUC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.41172754760000002" green="0.4117893279" blue="0.41170805690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -292,8 +303,10 @@
                             <constraint firstItem="IN1-mK-fzC" firstAttribute="top" secondItem="rYW-RH-plD" secondAttribute="bottom" constant="11" id="Tv5-jK-efb"/>
                             <constraint firstItem="5B8-Ju-svi" firstAttribute="top" secondItem="XcN-Ho-pqb" secondAttribute="bottom" constant="25" id="Wlu-w3-Xkg"/>
                             <constraint firstItem="fJ3-0X-ecj" firstAttribute="top" secondItem="XcN-Ho-pqb" secondAttribute="bottom" constant="137" id="bR5-6R-pjx"/>
+                            <constraint firstItem="sss-Db-HUP" firstAttribute="top" secondItem="1bG-vw-9zV" secondAttribute="top" constant="13" id="bq6-Tf-wP3"/>
                             <constraint firstItem="WBs-nz-qOl" firstAttribute="leading" secondItem="1bG-vw-9zV" secondAttribute="leading" constant="20" id="eJj-dB-q3p"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rYW-RH-plD" secondAttribute="trailing" constant="11" id="gHH-Zq-95q"/>
+                            <constraint firstItem="sss-Db-HUP" firstAttribute="leading" secondItem="1bG-vw-9zV" secondAttribute="leading" constant="9" id="hjy-SJ-CpY"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fJ3-0X-ecj" secondAttribute="trailing" constant="5" id="jZw-J4-9tP"/>
                             <constraint firstItem="5B8-Ju-svi" firstAttribute="centerX" secondItem="1bG-vw-9zV" secondAttribute="centerX" constant="-1" id="qj1-zT-7zP"/>
                             <constraint firstItem="WBs-nz-qOl" firstAttribute="top" secondItem="fJ3-0X-ecj" secondAttribute="bottom" constant="11" id="s7H-7T-4PR"/>
@@ -313,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbF-yA-AWt" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382" y="275"/>
+            <point key="canvasLocation" x="1381.875" y="274.64788732394368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JQD-9q-a5z">
@@ -334,6 +347,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back_btn_new" width="14" height="25"/>
         <image name="profile" width="300" height="278"/>
         <image name="unchecked" width="18" height="18"/>
     </resources>

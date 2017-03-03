@@ -49,4 +49,9 @@ class LoginDetailViewController: UIViewController {
         }
         self.genderLabel.text = "Gender: " + gender
     }
+    
+    //MARK: IBAction
+    @IBAction func backAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true);
+    }
 }
