@@ -32,6 +32,7 @@
 		D834689A1E67387100778395 /* LoginFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83468991E67387100778395 /* LoginFormUITests.swift */; };
 		D83468AA1E6739F200778395 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83468A91E6739F200778395 /* LoginFormViewController.swift */; };
 		D8C91F621E69DA7D009873AA /* LoginDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C91F611E69DA7D009873AA /* LoginDetailViewController.swift */; };
+		D8C91F651E69E971009873AA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C91F641E69E971009873AA /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		D834689B1E67387100778395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D83468A91E6739F200778395 /* LoginFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
 		D8C91F611E69DA7D009873AA /* LoginDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDetailViewController.swift; sourceTree = "<group>"; };
+		D8C91F641E69E971009873AA /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D83468791E67387100778395 /* AppDelegate.swift */,
+				D8C91F631E69E958009873AA /* Utils */,
 				D80555581E6895E7000E3B43 /* ThirdParty */,
 				D83468A81E6739F200778395 /* LoginForm */,
 				D8C91F601E69DA50009873AA /* LoginDetail */,
@@ -252,6 +255,14 @@
 			);
 			name = LoginDetail;
 			path = LoginForm;
+			sourceTree = "<group>";
+		};
+		D8C91F631E69E958009873AA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D8C91F641E69E971009873AA /* Utils.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +415,7 @@
 				D80555551E6895E3000E3B43 /* IQToolbar.swift in Sources */,
 				D805554F1E6895E3000E3B43 /* IQKeyboardManager.swift in Sources */,
 				D805554A1E6895E3000E3B43 /* IQUIView+Hierarchy.swift in Sources */,
+				D8C91F651E69E971009873AA /* Utils.swift in Sources */,
 				D80555531E6895E3000E3B43 /* IQPreviousNextView.swift in Sources */,
 				D80555511E6895E3000E3B43 /* IQTextView.swift in Sources */,
 				D80555471E6895E3000E3B43 /* IQNSArray+Sort.swift in Sources */,

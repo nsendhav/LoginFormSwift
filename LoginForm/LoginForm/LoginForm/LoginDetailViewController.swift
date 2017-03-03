@@ -52,6 +52,6 @@ class LoginDetailViewController: UIViewController {
     
     //MARK: IBAction
     @IBAction func backAction(_ sender: Any) {
-        navigationController?.popViewController(animated: true);
+        _ = navigationController?.popViewController(animated: true)
     }
 }

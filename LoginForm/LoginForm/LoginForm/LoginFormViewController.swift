@@ -93,6 +93,18 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate, UIImagePic
         self.navigationController?.pushViewController(loginDetailViewController, animated: true)
     }
     
+    func isSuccessValidation() -> Bool {
+        if !Utils.isValidUsername(Input: self.nameTextField.text!) {
+            Utils.showAlertWithTitle(title: "LoginForm", message: "Please enter correct username", onView: self)
+            return false
+        }
+        else if !Utils.isValidEmail(Input: self.emailTextField.text!) {
+            Utils.showAlertWithTitle(title: "LoginForm", message: "Please enter correct email", onView: self)
+            return false
+        }
+        return true
+    }
+    
     //MARK: @IBAction
     @IBAction func profilePhotoAction(_ sender: Any) {
         self.openImagePicker()
@@ -111,7 +123,14 @@ class LoginFormViewController: UIViewController, UIAlertViewDelegate, UIImagePic
     }
    
     @IBAction func submitAction(_ sender: Any) {
-        self.pushLoginDetailView()
+        nameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        dateOfBirthTextField.resignFirstResponder()
+        phoneNumberTextField.resignFirstResponder()
+        
+        if self.isSuccessValidation() {
+            self.pushLoginDetailView()
+        }
     }
     
     //MARK: UIImagePickerControllerDelegate
